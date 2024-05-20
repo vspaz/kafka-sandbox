@@ -1,4 +1,4 @@
-package org.phnm.kfk.producer;
+package org.phnm.kfk.sync;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;

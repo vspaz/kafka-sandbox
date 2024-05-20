@@ -1,2 +1,2 @@
 rootProject.name = "kafka-sandbox"
-include("basics")
+include("producers")

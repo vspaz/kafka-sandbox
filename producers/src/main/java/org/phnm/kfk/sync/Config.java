@@ -1,8 +1,7 @@
-package org.phnm.kfk.producer;
-
-import org.apache.kafka.common.serialization.StringSerializer;
+package org.phnm.kfk.sync;
 
 import java.util.Properties;
+import org.apache.kafka.common.serialization.StringSerializer;
 
 import static org.apache.kafka.clients.producer.ProducerConfig.*;
 

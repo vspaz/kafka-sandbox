@@ -1,4 +1,4 @@
-package org.phnm.kfk.producer;
+package org.phnm.kfk.sync;
 
 public enum Topics {
     ONE("topic_1"),
