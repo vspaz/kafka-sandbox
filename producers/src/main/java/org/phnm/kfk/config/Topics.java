@@ -1,4 +1,4 @@
-package org.phnm.kfk.sync;
+package org.phnm.kfk.config;
 
 public enum Topics {
     ONE("topic_1"),
@@ -19,3 +19,4 @@ public enum Topics {
         return super.toString();
     }
 }
+
