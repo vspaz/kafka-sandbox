@@ -1,0 +1,22 @@
+package org.phnm.kfk.config;
+
+import java.util.Properties;
+
+import static org.apache.kafka.clients.consumer.ConsumerConfig.*;
+
+import org.apache.kafka.common.serialization.StringDeserializer;
+
+public class Config {
+    static String groupId = "consumer";
+    public static Properties getProperties() {
+        Properties properties = new Properties();
+        properties.setProperty(BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+
+        // producer properties
+        properties.setProperty(KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        properties.setProperty(VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        properties.setProperty(GROUP_ID_CONFIG, groupId);
+        properties.setProperty(AUTO_OFFSET_RESET_CONFIG, "earliest");
+        return properties;
+    }
+}
