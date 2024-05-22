@@ -1,12 +1,12 @@
 package org.phnm.kfk.sync;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerRecord;
-import org.phnm.kfk.BasicProducer;
-
 import java.util.Properties;
 
-public class SyncProducer extends BasicProducer {
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.phnm.kfk.DefaultProducer;
+
+public class SyncProducer extends DefaultProducer {
 
     public SyncProducer(Properties properties) {
         super(properties);
