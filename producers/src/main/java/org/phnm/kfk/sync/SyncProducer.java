@@ -21,7 +21,7 @@ public class SyncProducer extends DefaultProducer {
                 producer.send(record);
                 Thread.sleep(REQUEST_INTERVAL);
             }
-            logger.info("producer finished.");
+            logger.info("producer finished: ok.");
         } catch (InterruptedException e) {
             logger.error(e.toString());
         }
