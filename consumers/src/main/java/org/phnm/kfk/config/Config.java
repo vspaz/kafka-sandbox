@@ -12,7 +12,8 @@ public class Config {
         Properties properties = new Properties();
         properties.setProperty(BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
 
-        // producer properties
+        // consumer properties
+        properties.setProperty(GROUP_ID_CONFIG, "group_one");
         properties.setProperty(KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.setProperty(VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.setProperty(GROUP_ID_CONFIG, groupId);
