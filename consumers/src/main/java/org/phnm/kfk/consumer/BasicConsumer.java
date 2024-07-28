@@ -8,17 +8,17 @@ import org.phnm.kfk.config.Topics;
 
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.Properties;
+import java.util.Map;
 
 public class BasicConsumer extends DefaultConsumer {
 
-    public BasicConsumer(Properties properties) {
-        super(properties);
+    public BasicConsumer(Map<String, Object> config) {
+        super(config);
     }
 
     @Override
     public void run() {
-        try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties)) {
+        try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(config)) {
             consumer.subscribe(Arrays.asList(Topics.ONE.getTopicName(), Topics.TWO.getTopicName()));
             while (true) {
                 ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(1000));

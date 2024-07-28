@@ -4,6 +4,6 @@ import org.phnm.kfk.config.Config;
 
 public class Main {
     public static void main(String[] args) {
-        new Shutdown(Config.getProperties()).run();
+        new Shutdown(Config.getConfig()).run();
     }
 }

@@ -9,17 +9,17 @@ import org.phnm.kfk.config.Topics;
 
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.Properties;
+import java.util.Map;
 
 public class Shutdown extends DefaultConsumer {
 
-    Shutdown(Properties properties) {
-        super(properties);
+    Shutdown(Map<String, Object> config) {
+        super(config);
     }
 
     @Override
     public void run() {
-        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
+        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(config);
 
         final Thread mainThread = Thread.currentThread();
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
