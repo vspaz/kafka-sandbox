@@ -3,6 +3,7 @@ package org.phnm.kfk;
 import java.util.Map;
 
 import static org.apache.kafka.clients.producer.ProducerConfig.*;
+
 import org.apache.kafka.common.serialization.StringSerializer;
 
 public class Config {

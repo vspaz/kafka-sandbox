@@ -1,20 +1,20 @@
 package org.phnm.kfk.callbacks;
 
-import java.util.Properties;
-
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.phnm.kfk.DefaultProducer;
 
+import java.util.Map;
+
 public class CbProducer extends DefaultProducer {
 
-    public CbProducer(Properties properties) {
-        super(properties);
+    public CbProducer(Map<String, Object> config) {
+        super(config);
     }
 
     @Override
     public void run() {
-        try (KafkaProducer<String, String> producer = new KafkaProducer<>(properties)) {
+        try (KafkaProducer<String, String> producer = new KafkaProducer<>(config)) {
             logger.info(String.format("Producer PID (%s) started.", ProcessHandle.current().pid()));
             for (int i = 0; i < 100; i++) {
                 ProducerRecord<String, String> record = new ProducerRecord<>(getTopic(i), "value_" + i);
