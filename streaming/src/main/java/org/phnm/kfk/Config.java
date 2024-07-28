@@ -1,10 +1,10 @@
 package org.phnm.kfk;
 
+import org.apache.kafka.common.serialization.StringSerializer;
+
 import java.util.Map;
 
 import static org.apache.kafka.clients.producer.ProducerConfig.*;
-
-import org.apache.kafka.common.serialization.StringSerializer;
 
 public class Config {
     public static Map<String, Object> getProducerProperties() {

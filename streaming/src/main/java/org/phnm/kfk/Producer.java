@@ -1,9 +1,8 @@
 package org.phnm.kfk;
 
 import com.launchdarkly.eventsource.EventHandler;
-import org.apache.kafka.clients.producer.KafkaProducer;
 import com.launchdarkly.eventsource.EventSource;
-
+import org.apache.kafka.clients.producer.KafkaProducer;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
