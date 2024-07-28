@@ -10,9 +10,10 @@ public class Config {
     public static Map<String, Object> getConfig() {
         return Map.of(
                 BOOTSTRAP_SERVERS_CONFIG, "localhost:9092",
+
+                BATCH_SIZE_CONFIG, "10",
                 KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName(),
-                VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName(),
-                BATCH_SIZE_CONFIG, "10"
+                VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName()
                 // PARTITIONER_CLASS_CONFIG, RoundRobinPartitioner.class.getName()
         );
     }

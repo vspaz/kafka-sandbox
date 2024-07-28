@@ -10,6 +10,7 @@ public class Config {
     public static Map<String, Object> getProducerProperties() {
         return Map.of(
                 BOOTSTRAP_SERVERS_CONFIG, "localhost:9092",
+
                 ACKS_CONFIG, "all",
                 BATCH_SIZE_CONFIG, Integer.toString(32 * 1024),
                 COMPRESSION_TYPE_CONFIG, "snappy",
